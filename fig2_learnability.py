@@ -150,4 +150,4 @@ plt.figure(1).text(0.2812, 0.9687, 'Logistic', transform=plt.figure(1).transFigu
 plt.figure(1).text(0.7076, 0.9687, 'Lotka-Volterra', transform=plt.figure(1).transFigure, fontsize=14., weight='bold')  # id=plt.figure(1).texts[1].new
 #% end: automatic generated code from pylustrator
 plt.show()
-fig2.savefig(filename='fig2_learnability.pdf',dpi=300,format='pdf',bbox_inches='tight')
+fig2.savefig(fname='fig2_learnability.pdf',dpi=300,format='pdf',bbox_inches='tight')

@@ -1,0 +1,1 @@
+slurmstepd: error: execve(): /export/home/shared/Projects/IntegralBMS/Integral_BMS_Governing_Equations/Lotka-Volterra../Bacteria/venv/bin/python3: No such file or directory
