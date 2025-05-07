@@ -1,3 +1,7 @@
-Full*/  
-Train*/
+
 nohup.out
+.ipynb_checkpoints/
+Lotka-Volterra/noise_data/*.csv
+Lotka-Volterra/noise_data*.pdf
+Logistic/noise_data*.pdf
+Logistic/noise_data/*.pkl
