@@ -5,3 +5,7 @@ Lotka-Volterra/noise_data/*.csv
 Lotka-Volterra/noise_data*.pdf
 Logistic/noise_data*.pdf
 Logistic/noise_data/*.pkl
+Lotka-Volterra/noise_data_ode/*
+Lotka-Volterra/results/*
+*svg
+*pdf
