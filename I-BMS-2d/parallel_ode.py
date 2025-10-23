@@ -1,12 +1,11 @@
-import sys
+import sys,os
 import numpy as np
 from copy import deepcopy
 from random import seed, random, randint
 from numpy import exp
+src = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(src)
 from mcmc_ode import *
-import warnings
-
-warnings.filterwarnings("always")
 
 import time
 

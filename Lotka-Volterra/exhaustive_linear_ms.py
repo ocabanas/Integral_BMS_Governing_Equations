@@ -183,7 +183,9 @@ smooth_mdl=np.inf
 smooth_visited_dl=[]
 
 #ODE BMS###############################################################
-true=('((_a0_ * x) + (_a1_ * (y * x)))', '((_a2_ * x) + (_a3_ * (y * x)))')
+true=('((_a0_ * x) + (_a1_ * (y * x)))', '((_a0_ * x) + (_a1_ * (y * x)))')
+print(dx_ode)
+print(dy_ode)
 pms_x = ms_ode.Tree(variables=['x','y'],
         parameters=['a%d' % i for i in range(8)],
         x=x_ode,dx=dx_ode,from_string=true[0],prior_par=prior)
@@ -193,7 +195,7 @@ pms_y = ms_ode.Tree(variables=['x','y'],
 pms_x.fy = pms_y
 pms_y.fy = pms_x
 # print('refit')
-pms_x.get_bic(reset=True, fit=True)
+pms_x.get_bic(reset=True, fit=True,verbose=True)
 pms_x.get_energy(bic=True, reset=True)
 print('I-BMS true:',pms_x.E)
 if pms_x.E <mdl:

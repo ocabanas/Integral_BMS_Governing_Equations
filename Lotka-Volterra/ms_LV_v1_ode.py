@@ -16,7 +16,7 @@ from importlib.machinery import SourceFileLoader
 # Get the absolute path of the script's directory
 script_dir = os.path.dirname(os.path.abspath(__file__))
 # Define the relative path to the module
-relative_module_path = "../I-BMS-2d/machinescientist_ode.py"
+relative_module_path = "../I-BMS-2d/parallel_ode.py"
 path = os.path.join(script_dir, relative_module_path)
 ms = SourceFileLoader("ms", path).load_module()
 
@@ -78,7 +78,7 @@ dy['d0'] = [ pd.DataFrame(data={'x':y_hat,'y':x_hat}),
 
 
 mcmc_resets = 2
-mcmc_steps = 4000
+mcmc_steps = 500
 XLABS = ['x','y']
 params = 8
 print(x)
@@ -160,6 +160,8 @@ def run_instance(_):
         pms_x.trees[temp].get_energy(bic=True, reset=True)
     pms_x.t1 = pms_x.trees[str(min(Ts))]
     pms_y.t1 = pms_y.trees[str(min(Ts))]
+    print('Initial MCMC model x:',pms_x.t1,pms_x.t1.E)
+    print('Initial MCMC model y:',pms_y.t1,pms_y.t1.E)
     mc_start = time.time()
     description_lengths.append([])
     for i in range(1, mcmc_steps + 1):
@@ -192,13 +194,13 @@ def run_instance(_):
             i_mdl = copy(pms_x.t1.E)
             model_x = deepcopy(pms_x.t1)
             model_y = deepcopy(pms_y.t1)
-    return dl,mdl,mdl_model_x,mdl_model_y
+    return dl,i_mdl,model_x,model_y
     
 with Pool(processes=2, maxtasksperchild=1) as pool:
     results = pool.map(run_instance, range(2))
 for result in results:
     #dl, , smooth_E, combo_x, combo_y = result
-    print('parallel res:',result)
+    print('parallel res:',result[1:])
     description_lengths.append(result[0])
     if result[1] <mdl:
         mdl=copy(result[1])

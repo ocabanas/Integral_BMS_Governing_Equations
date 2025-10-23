@@ -13,11 +13,6 @@ from scipy.integrate import solve_ivp
 
 # from scipy.misc import comb
 import traceback
-import warnings
-
-# warnings.filterwarnings('always')
-
-# seed(1111)
 
 # -----------------------------------------------------------------------------
 # The accepted operations (key: operation; value: #offspring)
@@ -710,13 +705,13 @@ class Tree:
                 for ds in self.x:
                     this_x = self.x[ds]
 
-                    def residuals(x, *a):
+                    def SSE(x, *a):
                         x0, y0, *pars_y = x
 
                         time = this_x.t.to_numpy()
 
                         # residuals
-                        def ode(y):
+                        def RK4(y):
                             # k1
                             args_x = []
                             for v_x in variables_x:
@@ -790,14 +785,14 @@ class Tree:
                                 1.0 / 6.0 * (k1[1] + 2.0 * k2[1] + 2.0 * k3[1] + k4[1]),
                             ]
 
-                        def Euler(func, y0, h, t_eval):
+                        def integrator(func, y0, h, t_eval):
                             x = y0[0]
                             y = y0[1]
 
                             t_x = [y0[0]]
                             t_y = [y0[1]]
                             for i in range(len(t_eval) - 1):
-                                diff = ode([x, y])
+                                diff = func([x, y])
                                 x = x + diff[0]
                                 y = y + diff[1]
                                 t_x.append(x)
@@ -805,13 +800,18 @@ class Tree:
                             return [t_x, t_y]
 
                         h = time[1] - time[0]
-                        sol = Euler(ode, y0=[x0, y0], h=h, t_eval=time)
-                        return np.concatenate(
+                        sol = integrator(RK4, y0=[x0, y0], h=h, t_eval=time)
+                        residuals = np.concatenate(
                             (
                                 np.subtract(sol[0], this_x.x.to_numpy()),
                                 np.subtract(sol[1], this_x.y.to_numpy()),
                             )
                         )
+                        sse = np.sum(residuals ** 2.)
+                        if np.isfinite(sse):
+                            return sse
+                        else:
+                            return np.inf
 
                     try:
                         # Setting initial values
@@ -865,15 +865,13 @@ class Tree:
                                 "Overflow value encountered in x0: setting to 1."
                             )
                         # Optimization
-                        b = [(-1e15,) * len(x0_fit), (1e15,) * len(x0_fit)]
-                        this_x = self.x[ds]
-                        res_fit = scipy.optimize.least_squares(
-                            residuals, x0=x0_fit, method="trf", bounds=b
-                        )  # ,max_nfev=500000)
-                        res_pars = scipy.optimize.least_squares(
-                            residuals, x0=x0_pars, method="trf", bounds=b
-                        )  # ,max_nfev=500000)
-                        res = min(res_fit, res_pars, key=lambda x: x["cost"])
+                        try:
+                            res_fit = scipy.optimize.minimize(SSE,x0=x0_fit,method='Powell')
+                        except Exception as e:
+                            print(e)
+                            print(traceback.format_exc())
+                            sys.exit()
+                            res_fit = {"x": np.inf}
                         if False in np.isfinite(res.x):
                             raise ValueError
                         if any(np.abs(x) > 1e10 for x in res.x):
@@ -951,7 +949,7 @@ class Tree:
                 for ds in self.x:
                     this_x = self.x[ds]
 
-                    def residuals(x, *a):
+                    def SSE(x, *a):
                         # print('sse min 1',x)
                         x0, y0, *pars = x
                         pars_x, pars_y = (
@@ -959,9 +957,8 @@ class Tree:
                             pars[len(parameters_x) :],
                         )
                         time = this_x.t.to_numpy()
-
-                        # residuals
-                        def ode(y):
+                        
+                        def RK4(y):
                             # k1
                             args_x = []
                             for v_x in variables_x:
@@ -1043,14 +1040,14 @@ class Tree:
                                 1.0 / 6.0 * (k1[1] + 2.0 * k2[1] + 2.0 * k3[1] + k4[1]),
                             ]
 
-                        def Euler(func, y0, h, t_eval):
+                        def integrator(func, y0, h, t_eval):
                             x = y0[0]
                             y = y0[1]
 
                             t_x = [y0[0]]
                             t_y = [y0[1]]
                             for i in range(len(t_eval) - 1):
-                                diff = ode([x, y])
+                                diff = func([x, y])
                                 x = x + diff[0]
                                 y = y + diff[1]
                                 t_x.append(x)
@@ -1058,13 +1055,18 @@ class Tree:
                             return [t_x, t_y]
 
                         h = time[1] - time[0]
-                        sol = Euler(ode, y0=[x0, y0], h=h, t_eval=time)
-                        return np.concatenate(
+                        sol = integrator(RK4, y0=[x0, y0], h=h, t_eval=time)
+                        residuals = np.concatenate(
                             (
                                 np.subtract(sol[0], this_x.x.to_numpy()),
                                 np.subtract(sol[1], this_x.y.to_numpy()),
                             )
                         )
+                        sse = np.sum(residuals ** 2.)
+                        if np.isfinite(sse):
+                            return sse
+                        else:
+                            return np.inf
 
                     try:
                         x0_fit = [self.x0_guess[ds]]
@@ -1155,24 +1157,20 @@ class Tree:
                                 for value in x0_fit
                             ]
                         # Optimize pars
-                        b = [(-1e15,) * len(x0_fit), (1e15,) * len(x0_fit)]
                         this_x = self.x[ds]
                         if verbose:
                             print("Initial gess fit", x0_fit)
-                            print("Initial gess pars", x0_pars)
                         try:
-                            res_fit = scipy.optimize.least_squares(
-                                residuals, x0=x0_fit, method="trf", bounds=b
-                            )  # ,max_nfev=1000000,verbose=2)
-                        except:
-                            res_fit = {"cost": np.inf}
-                        try:
-                            res_pars = scipy.optimize.least_squares(
-                                residuals, x0=x0_pars, method="trf", bounds=b
-                            )  # ,max_nfev=1000000,verbose=2)
-                        except:
-                            res_pars = {"cost": np.inf}
-                        res = min(res_fit, res_pars, key=lambda x: x["cost"])
+                            #res_fit = scipy.optimize.least_squares(
+                            #    residuals, x0=x0_fit, method="trf", bounds=b
+                            #)  # ,max_nfev=1000000,verbose=2)
+                            res_fit = scipy.optimize.minimize(SSE,x0=x0_fit,method='Powell')
+                        except Exception as e:
+                            print(e)
+                            print(traceback.format_exc())
+                            sys.exit()
+                            res_fit = {"x": np.inf}
+                        res = res_fit
                         if False in np.isfinite(res.x):
                             raise ValueError
                         if any(np.abs(x) > 1e10 for x in res.x):
@@ -1276,7 +1274,7 @@ class Tree:
             def sse(x0, y0, pars_x, pars_y):
                 time = this_x.t.to_numpy()
 
-                def ode(y):
+                def RK4(y):
                     # k1
                     args_x = []
                     for v_x in variables_x:
@@ -1358,14 +1356,14 @@ class Tree:
                         1.0 / 6.0 * (k1[1] + 2.0 * k2[1] + 2.0 * k3[1] + k4[1]),
                     ]
 
-                def Euler(func, y0, h, t_eval):
+                def integrator(func, y0, h, t_eval):
                     x = y0[0]
                     y = y0[1]
 
                     t_x = [y0[0]]
                     t_y = [y0[1]]
                     for i in range(len(t_eval) - 1):
-                        diff = ode([x, y])
+                        diff = func([x, y])
                         x = x + diff[0]
                         y = y + diff[1]
                         t_x.append(x)
@@ -1373,7 +1371,7 @@ class Tree:
                     return [t_x, t_y]
 
                 h = time[1] - time[0]
-                sol = Euler(ode, y0=[x0, y0], h=h, t_eval=time)
+                sol = integrator(RK4, y0=[x0, y0], h=h, t_eval=time)
                 return np.sum(np.square(np.subtract(sol[0], this_x.x.to_numpy())))
 
             try:
