@@ -1,0 +1,1533 @@
+2025-04-17 23:26:05,469 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-04-17 23:26:05,475 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-04-17 23:26:05,476 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:23:34,182 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:23:34,194 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:23:34,194 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:25:26,377 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:25:26,378 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:25:26,378 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:25:46,698 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:25:46,699 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:25:46,699 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:25:57,210 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:25:57,210 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:25:57,210 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:26:33,013 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:26:33,014 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:26:33,014 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:26:59,923 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:26:59,924 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:26:59,924 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:45:05,992 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:45:05,993 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:45:05,993 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:46:05,878 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:46:05,879 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:46:05,879 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:46:45,902 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:46:45,903 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:46:45,903 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:47:02,256 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:47:02,257 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:47:02,257 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:47:50,913 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:47:50,914 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:47:50,914 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:48:36,301 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:48:36,302 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:48:36,302 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:49:12,955 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:49:12,956 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:49:12,956 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:49:26,791 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:49:26,792 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:49:26,792 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:49:39,099 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:49:39,100 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:49:39,100 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:53:50,230 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:53:50,230 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:53:50,230 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:56:59,628 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:56:59,629 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:56:59,629 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 11:59:35,313 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 11:59:35,314 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 11:59:35,314 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 12:00:28,948 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 12:00:28,949 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 12:00:28,949 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 12:01:11,314 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 12:01:11,314 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 12:01:11,314 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 12:02:20,590 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 12:02:20,591 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 12:02:20,591 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 13:03:24,440 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 13:03:24,441 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 13:03:24,441 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 13:04:15,676 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 13:04:15,677 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 13:04:15,677 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:29:58,200 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:29:58,200 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:29:58,201 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:31:20,444 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:31:20,445 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:31:20,445 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:31:42,505 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:31:42,506 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:31:42,506 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:31:56,089 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:31:56,089 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:31:56,089 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:42:58,977 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:42:58,977 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:42:58,977 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:45:35,931 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:45:35,932 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:45:35,932 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:46:06,305 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:46:06,306 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:46:06,306 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:47:05,510 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:47:05,511 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:47:05,511 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:47:25,198 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:47:25,199 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:47:25,199 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:49:53,264 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:49:53,265 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:49:53,265 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:52:52,307 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:52:52,308 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:52:52,308 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:53:20,021 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:53:20,022 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:53:20,022 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:54:07,448 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:54:07,449 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:54:07,449 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 14:54:30,661 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 14:54:30,662 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 14:54:30,662 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:03:20,517 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:03:20,518 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:03:20,518 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:04:19,557 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:04:19,558 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:04:19,558 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:04:30,228 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:04:30,229 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:04:30,229 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:04:50,308 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:04:50,309 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:04:50,309 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:06:05,844 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:06:05,845 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:06:05,845 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:07:31,835 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:07:31,836 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:07:31,836 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:15:21,042 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:15:21,043 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:15:21,043 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:17:10,344 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:17:10,345 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:17:10,345 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:18:17,212 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:18:17,212 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:18:17,212 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:18:29,060 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:18:29,061 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:18:29,061 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:18:51,583 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:18:51,584 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:18:51,584 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:19:53,138 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:19:53,138 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:19:53,138 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:20:47,551 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:20:47,552 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:20:47,552 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:22:32,368 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:22:32,368 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:22:32,368 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:22:50,072 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:22:50,072 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:22:50,073 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:25:40,110 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:25:40,111 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:25:40,111 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:27:46,080 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:27:46,081 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:27:46,081 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:28:40,232 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:28:40,233 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:28:40,233 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:31:26,704 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:31:26,704 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:31:26,704 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:32:27,406 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:32:27,407 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:32:27,407 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:35:57,394 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:35:57,395 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:35:57,395 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:36:27,300 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:36:27,301 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:36:27,301 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:37:11,343 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:37:11,344 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:37:11,344 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:40:22,806 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:40:22,807 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:40:22,807 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:42:47,905 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:42:47,906 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:42:47,906 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:45:37,881 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:45:37,882 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:45:37,882 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:55:31,277 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:55:31,278 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:55:31,278 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:56:00,796 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:56:00,797 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:56:00,797 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:56:22,376 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:56:22,376 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:56:22,376 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 15:58:59,881 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 15:58:59,882 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 15:58:59,882 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 16:00:10,787 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 16:00:10,787 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 16:00:10,787 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 16:01:46,549 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 16:01:46,550 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 16:01:46,550 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 16:02:08,624 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 16:02:08,625 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 16:02:08,625 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 16:02:59,113 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 16:02:59,113 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 16:02:59,113 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
+2025-10-22 16:05:26,737 [INFO] 
+Limited Total Variation Regularization Support Detected! 
+---> CVXPY is not installed. 
+---> Many Total Variation Methods require CVXPY including: 
+---> velocity, acceleration, jerk, jerk_sliding, smooth_acceleration
+---> Please install CVXPY to use these methods.
+---> Recommended to also install MOSEK and obtain a MOSEK license.
+You can still use: total_variation_regularization.iterative_velocity
+
+2025-10-22 16:05:26,737 [INFO] 
+Limited Linear Model Support Detected! 
+---> PYCHEBFUN is not installed. 
+---> Install pychebfun to use chebfun derivatives (https://github.com/pychebfun/pychebfun/) 
+You can still use other methods 
+
+2025-10-22 16:05:26,737 [INFO] 
+Limited Linear Model Support Detected! 
+---> CVXPY is not installed. 
+---> Install CVXPY to use lineardiff derivatives 
+You can still use other methods 
+
