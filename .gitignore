@@ -5,8 +5,8 @@ __pycache__
 Lotka-Volterra/noise_data/*.csv
 Lotka-Volterra/noise_data*.pdf
 Logistic/noise_data*.pdf
-Logistic/noise_data/*.pkl
-Lotka-Volterra/noise_data_ode/*
+Logistic/noise_data_*.pkl
+Lotka-Volterra/noise_data_*
 Lotka-Volterra/results/*
 strogatz/models/*
 strogatz/outputs/*
