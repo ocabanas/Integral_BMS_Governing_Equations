@@ -10,7 +10,7 @@ from random import seed, random, choice
 from itertools import product, permutations
 from scipy.optimize import curve_fit, least_squares
 from scipy.integrate import solve_ivp
-
+import warnings
 # from scipy.misc import comb
 import traceback
 
@@ -817,8 +817,6 @@ class Tree:
                         # Setting initial values
                         x0_fit = [self.x0_guess[ds]]
                         x0_fit += [self.fy.x0_guess[ds]]
-                        x0_pars = [self.x0_guess[ds]]
-                        x0_pars += [self.fy.x0_guess[ds]]
 
                         if len(parameters_y) != 0:
                             try:
@@ -842,17 +840,11 @@ class Tree:
                                     maxfev=1000000,
                                 )
                                 x0_fit += [val for val in res_fit_y[0]]
-                                x0_pars += [
-                                    self.fy.par_values[ds][p.name] for p in parameters_y
-                                ]
                             except Exception as e:
                                 if verbose:
                                     print(e)
                                 res_fit_y = None
                                 x0_fit += [1.0 for p in parameters_y]
-                                x0_pars += [
-                                    self.fy.par_values[ds][p.name] for p in parameters_y
-                                ]
                         else:
                             res_fit_y = None
 
@@ -872,13 +864,14 @@ class Tree:
                             print(traceback.format_exc())
                             sys.exit()
                             res_fit = {"x": np.inf}
-                        if False in np.isfinite(res.x):
                             raise ValueError
-                        if any(np.abs(x) > 1e10 for x in res.x):
+                        if False in np.isfinite(res_fit.x):
+                            raise ValueError
+                        if any(np.abs(x) > 1e10 for x in res_fit.x):
                             warnings.warn(
                                 f"Overflow value encountered in optimized parameters: {res.x}"
                             )
-                        x0, y0, *pars_y = res.x
+                        x0, y0, *pars_y = res_fit.x
                         # Save fit pars
                         self.x0[str(self)][str(self.fy)][ds] = x0
                         self.fy.x0[str(self.fy)][str(self)][ds] = y0
@@ -1071,8 +1064,6 @@ class Tree:
                     try:
                         x0_fit = [self.x0_guess[ds]]
                         x0_fit += [self.fy.x0_guess[ds]]
-                        x0_pars = [self.x0_guess[ds]]
-                        x0_pars += [self.fy.x0_guess[ds]]
 
                         try:
                             this_xhat, this_dxhat = self.dx[ds]
@@ -1092,17 +1083,11 @@ class Tree:
                                 maxfev=1000000,
                             )
                             x0_fit += [val for val in res_fit_x[0]]
-                            x0_pars += [
-                                self.par_values[ds][p.name] for p in parameters_x
-                            ]
                         except Exception as e:
                             if verbose:
                                 print(e)
                             res_fit_x = None
                             x0_fit += [1.0 for p in parameters_x]
-                            x0_pars += [
-                                self.par_values[ds][p.name] for p in parameters_x
-                            ]
 
                         if len(parameters_y) != 0:
                             try:
@@ -1128,17 +1113,11 @@ class Tree:
                                     maxfev=1000000,
                                 )
                                 x0_fit += [val for val in res_fit_y[0]]
-                                x0_pars += [
-                                    self.fy.par_values[ds][p.name] for p in parameters_y
-                                ]
                             except Exception as e:
                                 if verbose:
                                     print(e)
                                 res_fit_y = None
                                 x0_fit += [1.0 for p in parameters_y]
-                                x0_pars += [
-                                    self.fy.par_values[ds][p.name] for p in parameters_y
-                                ]
                         else:
                             res_fit_y = None
                         if False in np.isfinite(x0_fit):
@@ -1170,16 +1149,17 @@ class Tree:
                             print(traceback.format_exc())
                             sys.exit()
                             res_fit = {"x": np.inf}
-                        res = res_fit
-                        if False in np.isfinite(res.x):
                             raise ValueError
-                        if any(np.abs(x) > 1e10 for x in res.x):
+                        res = res_fit
+                        if False in np.isfinite(res_fit.x):
+                            raise ValueError
+                        if any(np.abs(x) > 1e10 for x in res_fit.x):
                             warnings.warn(
-                                f"Overflow value encountered in optimized parameters: {res.x}"
+                                f"Overflow value encountered in optimized parameters: {res_fit.x}"
                             )
                         if verbose:
-                            print("Minimized pars", res.x)
-                        x0, y0, *pars = res.x
+                            print("Minimized pars", res_fit.x)
+                        x0, y0, *pars = res_fit.x
                         pars_x, pars_y = (
                             pars[0 : len(parameters_x)],
                             pars[len(parameters_x) :],
@@ -1442,7 +1422,7 @@ class Tree:
         if reset == True:
             self.bic = BIC
             if type(self.fy) != type(None):
-                self.fy.bic = self.fy.get_bic(reset=False)
+                self.fy.bic = BIC
         if verbose:
             print("BIC", BIC, sse, parameters)
         return BIC
@@ -1808,9 +1788,9 @@ class Tree:
                 dEB += (bicNew - bicOld) / 2.0
                 # print('Confirm update1',dEB)
                 # print(traceback.print_stack())
-            else:
-                par_valuesNew = deepcopy(self.par_values)
-                par_valuesNew_y = deepcopy(self.fy.par_values)
+            #else:
+                #par_valuesNew = deepcopy(self.par_values)
+                #par_valuesNew_y = deepcopy(self.fy.par_values)
                 # print('Confirm update2',dEB)
         # Done
         try:
@@ -1926,8 +1906,8 @@ class Tree:
                 self.fy.par_values = par_valuesOld_y
                 #
                 dEB += (bicNew - bicOld) / 2.0
-            else:
-                par_valuesNew = deepcopy(self.par_values)
+            #else:
+                #par_valuesNew = deepcopy(self.par_values)
             # Done
             try:
                 dEB = float(dEB)
@@ -2082,7 +2062,7 @@ class Tree:
                     self.prune_root(update_gof=False, verbose=verbose)
                     self.par_values = par_valuesNew
                     self.fy.par_values = par_valuesNew_y
-                    self.get_bic(reset=True, fit=True, verbose=verbose)
+                    self.get_bic(reset=True, fit=False, verbose=verbose)
                     self.get_energy(reset=True)
                     if verbose:
                         print("Accepted move (pr)")
@@ -2109,7 +2089,7 @@ class Tree:
                     self.replace_root(rr=newrr, update_gof=False, verbose=verbose)
                     self.par_values = par_valuesNew
                     self.fy.par_values = par_valuesNew_y
-                    self.get_bic(reset=True, fit=True, verbose=verbose)
+                    self.get_bic(reset=True, fit=False, verbose=verbose)
                     self.get_energy(reset=True)
                     if verbose:
                         print("Accepted move (rr)")
@@ -2161,7 +2141,7 @@ class Tree:
                 # update others
                 self.par_values = deepcopy(par_valuesNew)
                 self.fy.par_values = deepcopy(par_valuesNew_y)
-                self.get_bic(reset=True, fit=True, verbose=verbose)
+                self.get_bic(reset=True, fit=False, verbose=verbose)
                 self.get_energy(reset=True)
                 if verbose:
                     print("Accepted move (lr)")
@@ -2227,15 +2207,15 @@ class Tree:
                 self.et_replace(target, new, verbose=verbose)
                 self.par_values = par_valuesNew
                 self.fy.par_values = par_valuesNew_y
-                self.get_bic(reset=True, fit=True, verbose=verbose)
+                self.get_bic(reset=True, fit=False, verbose=verbose)
                 self.get_energy(reset=True)
                 if verbose:
                     print("Accepted move (sr)")
                     print("dE", dE, "dEB", dEB, "dEP", dEP)
                     print(self.par_values)
         # Done
-        self.get_bic(reset=True, fit=True)
-        self.get_energy(bic=True, reset=True)
+        #self.get_bic(reset=True, fit=False)
+        #self.get_energy(bic=True, reset=True)
         # self.fy.get_energy(bic=False,reset=True)
         if verbose:
             print("%")

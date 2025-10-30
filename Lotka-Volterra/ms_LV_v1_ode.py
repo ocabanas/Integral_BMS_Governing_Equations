@@ -78,7 +78,7 @@ dy['d0'] = [ pd.DataFrame(data={'x':y_hat,'y':x_hat}),
 
 
 mcmc_resets = 2
-mcmc_steps = 500
+mcmc_steps = 3000
 XLABS = ['x','y']
 params = 8
 print(x)
@@ -181,8 +181,6 @@ def run_instance(_):
             pms_y.trees[ET2] = t1
             t1.BT = BT2
             t2.BT = BT1
-            pms_x.trees[ET1].get_bic(reset=True, fit=True)
-            pms_x.trees[ET1].get_energy(bic=False, reset=True)
             pms_y.t1 = pms_y.trees[str(min(Ts))]
 
         dl.append(copy(pms_x.t1.E ))
@@ -207,14 +205,14 @@ for result in results:
         mdl_model_x = deepcopy(result[2])
         mdl_model_y = deepcopy(result[3])
 
-
-with open(f'./llac_{file}', 'wb') as f:
+file_name = os.path.basename(file)
+with open(f'./noise_data_ode/{file_name[:-4]}.pkl', 'wb') as f:
     # A new file will be created
-    pickle.dump({'x':best_model_x,'y':best_model_y}, f)
+    pickle.dump({'x':mdl_model_x,'y':mdl_model_y}, f)
 for r in dls:
     plt.plot(r)
 plt.yscale('symlog')
-plt.savefig(f'./results/{file[:-4]}_dl.pdf',format='pdf')
+plt.savefig(f'./noise_data_ode/{file_name[:-4]}_dl.pdf',format='pdf')
 plt.clf()
 print('end main')
 

@@ -1,6 +1,7 @@
 
 nohup.out
 .ipynb_checkpoints/
+__pycache__
 Lotka-Volterra/noise_data/*.csv
 Lotka-Volterra/noise_data*.pdf
 Logistic/noise_data*.pdf

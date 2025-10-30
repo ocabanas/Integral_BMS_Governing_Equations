@@ -59,7 +59,7 @@ def get_expressions(the_vars, nmax=None):
         nmax = len(the_vars)
     for n in range(nmax+1):
         all_exp += get_expressions_n(the_vars, n=n)
-        all_exp += get_expressions_no_cte(the_vars, n=n)
+        #all_exp += get_expressions_no_cte(the_vars, n=n)
     return all_exp
 
 
@@ -167,9 +167,6 @@ terms=['x', '(pow2(x))',
          '(x * y)', '(x * (pow2(y)))',
          '((pow2(x)) * y)','(pow3(x))','(pow3(y))']
 
-terms=['x','y', '(x * y)']
-
-
 models = list(set(get_expressions(terms,4)))
 
 
@@ -276,7 +273,7 @@ combos = list(itertools.product(models, repeat=2))
 def is_valid_real(x):
 	return x.is_real and not x.has(zoo, oo, -oo, nan, ComplexInfinity)
 # Sequential pool with automatic memory cleanup
-with Pool(processes=3, maxtasksperchild=1) as pool:
+with Pool(processes=5, maxtasksperchild=1) as pool:
 	for result in pool.imap(evaluate_combo, combos):
 		ibms_E, fit_E, smooth_E, combo_x, combo_y = result
 		if ibms_E <mdl:
