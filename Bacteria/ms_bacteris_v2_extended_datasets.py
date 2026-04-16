@@ -9,21 +9,31 @@ warnings.filterwarnings("ignore")
 from copy import deepcopy, copy
 from datetime import datetime
 import pickle
-#from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 import sys, getopt
 import matplotlib.pyplot as plt
-#import pynumdiff
+import pynumdiff
 import time
-# Import Machine Scientist
-from importlib.machinery import SourceFileLoader
 
-# Get the absolute path of the script's directory
-script_dir = os.path.dirname(os.path.abspath(__file__))
-# Define the relative path to the module
-relative_module_path = "rguimera-machine-scientist-constrained/machinescientist_ode.py"
-path = os.path.join(script_dir, relative_module_path)
-ms = SourceFileLoader("ms", path).load_module()
 
+src = os.path.dirname('/export/home/oriolca/Integral_BMS_Governing_Equations/I-BMS-1d/')
+sys.path.append(src)
+from mcmc_ode import *
+from parallel_ode import *
+
+path = os.path.join(src, "Prior/")
+sys.path.append(path)
+from fit_prior import read_prior_par
+
+priors = {
+    "v1_p8": f"Prior/final_prior_param_sq.named_equations.nv1.np8.2017-10-18 18:07:35.261518.dat",
+    "v2_p3": f"Prior/final_prior_param_sq.named_equations.nv2.np3.2016-09-09 18:49:42.927679.dat",
+    "v2_p4": f"Prior/final_prior_param_sq.named_equations.nv2.np4.2016-09-09 18:49:43.056910.dat",
+    "v2_p8": f"Prior/final_prior_param_sq.named_equations.nv2.np8.2016-09-09 18:49:42.800618.dat",
+}
+
+path = os.path.join(src, priors[f"v1_p8"])
+prior_par = read_prior_par(path)
 
 import argparse
 
@@ -34,6 +44,7 @@ parser.add_argument("--prod", action="store_true", help="Enable mode flag")
 parser.add_argument("--comb", action="store_true", help="Enable mode flag")
 
 args = parser.parse_args()
+
 
 if args.mode:
     # Generating train/test with 50% of columns
@@ -85,7 +96,7 @@ if args.mode:
         "H12",
     ]
     train_labels, test_labels = train_test_split(
-        columns, test_size=0.5, random_state=42
+        columns, test_size=0.25, random_state=42
     )
     print(len(columns), len(train_labels), len(test_labels))
     with open(f"./{folder_name}/train_test_0.pkl", "wb") as file:
@@ -152,7 +163,7 @@ if args.mode:
         "R.S.6 N-Acetyl-D-Glucosamine, 0.2%",
     ]
     train_labels, test_labels = train_test_split(
-        columns, test_size=0.5, random_state=42
+        columns, test_size=0.25, random_state=42
     )
     print(len(columns), len(train_labels), len(test_labels))
     with open(f"./{folder_name}/train_test_6.pkl", "wb") as file:
@@ -221,7 +232,7 @@ if args.mode:
         "N- acetyl D Glucosamine",
     ]
     train_labels, test_labels = train_test_split(
-        columns, test_size=0.5, random_state=42
+        columns, test_size=0.25, random_state=42
     )
     print(len(columns), len(train_labels), len(test_labels))
     with open(f"./{folder_name}/train_test_10.pkl", "wb") as file:
@@ -338,7 +349,7 @@ if args.mode:
         "R.S.18 Cytosine",
     ]
     train_labels, test_labels = train_test_split(
-        columns, test_size=0.5, random_state=42
+        columns, test_size=0.25, random_state=42
     )
     print(len(columns), len(train_labels), len(test_labels))
     with open(f"./{folder_name}/train_test_18.pkl", "wb") as file:
@@ -378,7 +389,7 @@ if args.mode:
         "R.S.19 Glycine.1",
     ]
     train_labels, test_labels = train_test_split(
-        columns, test_size=0.5, random_state=42
+        columns, test_size=0.25, random_state=42
     )
     print(len(columns), len(train_labels), len(test_labels))
     with open(f"./{folder_name}/train_test_19.pkl", "wb") as file:
@@ -410,8 +421,10 @@ if args.comb:
 	folder_name='Full_data_lin_term_com_'+datetime.now().strftime("%Y_%m_%d-%I_%M_%S")
 	dir=os.path.join(os.getcwd(),folder_name)
 	if not os.path.exists(dir):
-	    os.mkdir(dir)
-	constraint=('((_a0_ * B) + ',')')
+		os.mkdir(dir)
+	#constraint=('((_a0_ * B) + ',')')
+	fixed_term='(_a0_ * B)'
+	fixed_term_op='+'
 
 if args.prod:
 	#Sym B:
@@ -419,36 +432,53 @@ if args.prod:
 	folder_name='Full_data_lin_term_prod_'+datetime.now().strftime("%Y_%m_%d-%I_%M_%S")
 	dir=os.path.join(os.getcwd(),folder_name)
 	if not os.path.exists(dir):
-	    os.mkdir(dir)
-	constraint=('((_a0_ * B) * ',')')
+		os.mkdir(dir)
+	#constraint=('((_a0_ * B) * ',')')
+	fixed_term='(_a0_ * B)'
+	fixed_term_op='*'
 	
 if args.free:
-    # Sym C:
-    # Physical contraint: No constraint
-    folder_name = "Full_data_free_model" + datetime.now().strftime("%Y_%m_%d-%I_%M_%S")
-    dir = os.path.join(os.getcwd(), folder_name)
-    if not os.path.exists(dir):
-        os.mkdir(dir)
-    constraint = None
+	# Sym C:
+	# Physical contraint: No constraint
+	folder_name = "Full_data_free_model" + datetime.now().strftime("%Y_%m_%d-%I_%M_%S")
+	dir = os.path.join(os.getcwd(), folder_name)
+	if not os.path.exists(dir):
+		os.mkdir(dir)
+	#constraint = None
+	fixed_term=None
+	fixed_term_op=None
 
-with open(f"./Train_test_data_lin_term_com2025_03_11-11_21_44/x.pkl", "rb") as file:
+with open(f"./Train_test_data_lin_term_com2025_11_11-01_14_14/x.pkl", "rb") as file:
     # A new file will be created
     x = pickle.load(file)
 
-with open(f"./Train_test_data_lin_term_com2025_03_11-11_21_44/y.pkl", "rb") as file:
+with open(f"./Train_test_data_lin_term_com2025_11_11-01_14_14/y.pkl", "rb") as file:
     # A new file will be created
     y = pickle.load(file)
 
+# Define dx for model guesses
+dx = {}
+for ds in list(x.keys()):
+	B = x[ds].B.to_numpy()
+	h = x[ds].t.to_numpy()[1] - x[ds].t.to_numpy()[0]
+	par = [2, 21, 21]
+	x_hat, dxdt_hat = pynumdiff.linear_model.polydiff(
+			B, h, par, options=None
+		)
+	dx.update({ds: [pd.DataFrame(data={'B': deepcopy(x_hat)}) , pd.Series(deepcopy(dxdt_hat)) ]})
+
 file1 = open(f"./{folder_name}/res.txt", "a")
 
-mcmc_resets = 1
-mcmc_steps = 2000
+mcmc_resets = 2
+mcmc_steps = 10000
 XLABS = ["B"]
 params = 8
 
+"""
 best_model, dls = ms.machinescientist_to_folder(
     x,
     y,
+    dx
     XLABS=XLABS,
     n_params=params,
     resets=mcmc_resets,
@@ -456,11 +486,66 @@ best_model, dls = ms.machinescientist_to_folder(
     folder=folder_name,
     constraint=constraint,
 )
+"""
 
+Ts=[1] + [1.04**k for k in range(1, 20)]
 
+description_lengths, mdl, mdl_model = [], np.inf, None
+# Start some MCMC
+runs = 0
+while runs < mcmc_resets:
+	try:  # Sometimes a NaN error appears. Therefore we forget the current MCMC and start again.
+		# Initialize the parallel machine scientist
+		pms = Parallel(
+			Ts,
+			ops=OPS,
+			variables=XLABS,
+			parameters=["a%d" % i for i in range(params)],
+			x=x,
+            y=y,
+			dx=dx,
+			prior_par=prior_par,
+			fixed_term = fixed_term,
+			fixed_term_op = fixed_term_op,
+		)
+		print('initial model',pms.t1)
+		# MCMC
+		mc_start = time.time()
+		for i in range(1, mcmc_steps + 1):
+			start = time.time()
+			# MCMC update
+			pms.mcmc_step()  # MCMC step within each T
+			"""
+			if abs(pms.t1.E - pms.t1.get_energy(bic=True, reset=True)[0]) > 1.0e-6:
+				print("Reset energy")
+				for tree in pms.trees.values():
+					tree.get_energy(bic=True, reset=True)
+			"""
+			pms.tree_swap()  # Attempt to swap two randomly selected consecutive temps
+
+			description_lengths.append(copy(pms.t1.E))
+			# Add the description length to the trace
+			# description_lengths.append(pms.t1.E)
+			# Check if this is the MDL expression so far
+			if pms.t1.E < mdl:
+				mdl, mdl_model = copy(pms.t1.E), deepcopy(pms.t1)
+				print(mdl_model)
+				with open(f"./{folder_name}/model_mdl.pkl", "wb") as file:
+				    # A new file will be created
+				    pickle.dump(mdl_model, file)
+			# Save step of model
+		runs += 1
+	except Exception as e:
+		print("Error during MCMC evolution:")
+		print(e)
+		print(traceback.format_exc())
+		print("Current model", pms.t1)
+		print("Current energy", pms.t1.E)
+		print("Restarting MCMC")
+		q
 with open(f"./{folder_name}/model_mdl.pkl", "wb") as file:
     # A new file will be created
-    pickle.dump(best_model, file)
+    pickle.dump(mdl_model, file)
 
 
 plt.plot(dls)

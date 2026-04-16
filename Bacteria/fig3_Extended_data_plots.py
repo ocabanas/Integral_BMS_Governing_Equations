@@ -86,7 +86,6 @@ file = open(f_name,'rb')
 test_y = pickle.load(file)
 
 f_name='Full_data_lin_term_prod_2025_03_27-06_00_44/mdl_refit_test1.pkl'
-f_name='mdl_mod_model2_test.pkl'
 file = open(f_name,'rb')
 test_bms = pickle.load(file)
 print('Test model',test_bms,test_bms.E)
@@ -104,7 +103,6 @@ file = open(f_name,'rb')
 train_y = pickle.load(file)
 
 f_name='Full_data_lin_term_prod_2025_03_27-06_00_44/mdl_refit_train1.pkl'
-f_name='mdl_mod_model2_train.pkl'
 file = open(f_name,'rb')
 train_bms = pickle.load(file)
 print('Train model', train_bms, train_bms.E)
@@ -313,12 +311,12 @@ ax4.plot(train_y[train_col2].to_numpy(),train_predictions_gom[train_col2].to_num
 ax4.set_ylabel('Derivative')
 ax4.set_box_aspect(1)
 #ax3.legend(loc='best',frameon=False,fontsize=7)
-train_mean_errors={key:np.mean(train_error_model[key]) for key in ['I-BMS','Logistic','Gompertz']}
+train_mean_errors={key:np.mean(np.array(train_error_model[key])/np.array(train_error_model['I-BMS'])) for key in ['I-BMS','Logistic','Gompertz']}
 print(train_mean_errors)
-train_err_mean_errors={key:np.std(train_error_model[key]) / np.sqrt(len(train_error_model[key])) for key in ['I-BMS','Logistic','Gompertz']}
+train_err_mean_errors={key:np.std(np.array(train_error_model[key])/np.array(train_error_model['I-BMS'])) / np.sqrt(len(train_error_model[key])) for key in ['I-BMS','Logistic','Gompertz']}
 ax2.bar([0,1,2],list(train_mean_errors.values()),yerr=list(train_err_mean_errors.values()),tick_label=['I-BMS','Logistic','Gompertz'],
         color=[colors['I-BMS'],colors['Log'],colors['Gom']])
-ax2.set_ylabel('RMSE')
+ax2.set_ylabel('RMSE(model)/RMSE(IBMS)')
 #ax2.set_xticklabels(['I-BMS','Logistic','Gompertz'],rotation=60, ha='right')
 ax2.set_xticklabels([])
 #ax2.set_box_aspect(1)
@@ -414,12 +412,12 @@ ax10.set_ylabel('Derivative')
 ax10.set_box_aspect(1)
 #handles,labels=ax3.get_legend_handles_labels()
 #ax3.legend(loc='best',frameon=False,fontsize=7)
-test_mean_errors={key:np.mean(test_error_model[key]) for key in ['I-BMS','Logistic','Gompertz']}
+test_mean_errors={key:np.mean(np.array(test_error_model[key])/np.array(test_error_model['I-BMS'])) for key in ['I-BMS','Logistic','Gompertz']}
 print(test_mean_errors)
-test_err_mean_errors={key:np.std(test_error_model[key]) / np.sqrt(len(test_error_model[key])) for key in ['I-BMS','Logistic','Gompertz']}
+test_err_mean_errors={key:np.std(np.array(test_error_model[key])/np.array(test_error_model['I-BMS'])) / np.sqrt(len(test_error_model[key])) for key in ['I-BMS','Logistic','Gompertz']}
 ax8.bar([0,1,2],list(test_mean_errors.values()),yerr=list(test_err_mean_errors.values()),tick_label=['I-BMS','Logistic','Gompertz'],
         color=[colors['I-BMS'],colors['Log'],colors['Gom']])
-ax8.set_ylabel('RMSE')
+ax8.set_ylabel('RMSE(model)/RMSE(IBMS)')
 ax8.set_xticklabels(['I-BMS','Logistic','Gompertz'],rotation=60, ha='right')
 #ax8.set_box_aspect(1)
 
@@ -464,7 +462,7 @@ plt.figure(1).text(0.0281, 0.6755, 'Train', transform=plt.figure(1).transFigure,
 plt.figure(1).text(0.0281, 0.2691, 'Test', transform=plt.figure(1).transFigure, fontsize=14., weight='bold', rotation=90.)  # id=plt.figure(1).texts[1].new
 #% end: automatic generated code from pylustrator
 plt.show()
-fig.savefig(filename=f'fig3_bacterial_growth_modmodel.pdf',dpi=300,format='pdf',bbox_inches='tight',pad_inches=0.1)
+fig.savefig(filename=f'fig3_bacterial_growth.pdf',dpi=300,format='pdf',bbox_inches='tight',pad_inches=0.1)
 
 
 
