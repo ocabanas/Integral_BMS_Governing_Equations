@@ -28,14 +28,17 @@ sigmas = [
 ]
 for i in range(0, 40):
     for sigma in sigmas:
+        if not os.path.isfile(f'noise_data_res_fit/{sigma}_{i}.pkl'):
+            os.system(f"python3 ms_logistic_v1_fit.py -f noise_data/{sigma}_{i}.pkl -s False")
         if not os.path.isfile(f'noise_data_res_fit_smooth/{sigma}_{i}.pkl'):
             os.system(f"python3 ms_logistic_v1_fit.py -f noise_data/{sigma}_{i}.pkl -s True")
         if not os.path.isfile(f'noise_data_res_ODE/{sigma}_{i}.pkl'):
             os.system(f"python3 ms_logistic_v1_ode.py -f noise_data/{sigma}_{i}.pkl")
-        if not os.path.isfile(f'noise_data_res_exhaustive_new/BMS_{sigma}_{i}.pkl'):
+        if not os.path.isfile(f'noise_data_res_exhaustive/BMS_{sigma}_{i}.pkl'):
             os.system(f"python3 exhaustive_linear_MS.py -f noise_data/{sigma}_{i}.pkl")
 
 
 for i in range(0, 40):
     for n in list(range(10, 91, 10)) + list(range(100, 1001, 100)):
-        os.system(f"python3 exhaustive_linear_MS.py -f noise_data_sigma0.05/{i}_{n}.pkl")
+        if not os.path.isfile(f'noise_data_res_exhaustive/BMS_{i}_{n}.pkl'):
+            os.system(f"python3 exhaustive_linear_MS.py -f noise_data_sigma0.05/{i}_{n}.pkl")

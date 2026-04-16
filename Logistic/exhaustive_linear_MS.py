@@ -181,13 +181,13 @@ for model in models:
         mdl_smooth = deepcopy(ms_model_smooth.E)
 
 file_name = os.path.basename(file)
-with open(f"./noise_data_res_exhaustive_new/BMS_{file_name[:-4]}.pkl", "wb") as f:
+with open(f"./noise_data_res_exhaustive/BMS_{file_name[:-4]}.pkl", "wb") as f:
     # A new file will be created
     pickle.dump(mdl_model, f)
-with open(f"./noise_data_res_exhaustive_new/BMS_fit_{file_name[:-4]}.pkl", "wb") as f:
+with open(f"./noise_data_res_exhaustive/BMS_fit_{file_name[:-4]}.pkl", "wb") as f:
     # A new file will be created
     pickle.dump(mdl_model_fit, f)
-with open(f"./noise_data_res_exhaustive_new/BMS_smooth_{file_name[:-4]}.pkl", "wb") as f:
+with open(f"./noise_data_res_exhaustive/BMS_smooth_{file_name[:-4]}.pkl", "wb") as f:
     # A new file will be created
     pickle.dump(mdl_model_smooth, f)
 print(mdl_model, mdl_model_fit, mdl_model_smooth)
