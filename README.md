@@ -120,61 +120,109 @@ prior = read_prior_par(
 ```
 
 ## 3. Read and Prepare Data
+Prepare your dataset as Pandas DataFrames:
+
+- data: time series of variables
+- dxdt_data: numerical derivatives
 
 ```python
-data = pd.DataFrame() # columns t (time), and compontents as variable names ej: 'x':x,'y':y
-
-dxdt_data = pd.DataFrame() # compontents numerical derivatives as variable names ej: 'x':dxdt,'y':dydt
-
-# In the case of multiple datasets, generate a dictionary of dataframes where the keys identify the dataset
-
-data = {'data1': dataframe1,
-'data2':dataframe2,...
-}
-dxdt_data = {'data1': dx_dataframe1,
-'data2':dx_dataframe2,...
-}
-
+data = pd.DataFrame()  # columns: t, x, y, ...
+dxdt_data = pd.DataFrame()  # columns: x, y, ... (derivatives)
 ```
+### Multiple Datasets
 
+If using multiple datasets, organize them as dictionaries:
+```python
+data = {
+    'data1': dataframe1,
+    'data2': dataframe2,
+}
+
+dxdt_data = {
+    'data1': dx_dataframe1,
+    'data2': dx_dataframe2,
+}
+```
+### Special Case: 2D Systems
+
+For 2D systems, define swapped datasets for the second variable:
+```python
+data_y = pd.DataFrame()   # swap column variable labels (x ↔ y)
+dydt_data = pd.DataFrame() # swap column variable labels (x ↔ y)
+```
 ## 4. Initialize MCMC
 
+Set up the parallel tempering MCMC:
 ```python
 mcmc_resets = 2
 mcmc_steps = 3000
 XLABS = ['x','y']
 params = 8
 
-pms_x = Parallel(
-Ts,
-x,
-dx,
-XLABS,
-parameters,
-prior
+pms_x = ms.Parallel(
+        Ts,
+        variables=XLABS,
+        parameters=["a%d" % i for i in range(params)],
+        x=data,
+        dx=dxdt_data,
+        prior_par=prior,
+    )
+```
+### For 2D systems, initialize the second model:
+```python
+pms_y = ms.Parallel(
+    Ts,
+    variables=XLABS,
+    parameters=["a%d" % i for i in range(params)],
+    x=data_y,
+    dx=dydt_data,
+    prior_par=prior,
 )
-
-pms_y = Parallel(
-Ts,
-x,
-dx,
-XLABS,
-parameters,
-prior
-)
+```
+And Couple the Models Across Temperatures
+```python
+  for temp in pms_x.trees.keys():
+      pms_x.trees[temp].fy = pms_y.trees[temp]
+      pms_y.trees[temp].fy = pms_x.trees[temp]
+      # print('refit')
+      pms_x.trees[temp].get_bic(reset=True, fit=True)
+      pms_x.trees[temp].get_energy(bic=True, reset=True)
+  pms_x.t1 = pms_x.trees[str(min(Ts))]
+  pms_y.t1 = pms_y.trees[str(min(Ts))]
 ```
 
 ## 5. Run I-BMS
-
+Execute the MCMC sampling with parallel tempering:
 ```python
-for i in range(1, mcmc_steps + 1):
+for i in range(0, mcmc_steps):
     pms_x.mcmc_step()
     pms_y.mcmc_step()
-    pms_x.tree_swap()
+    # Attempt to swap two randomly selected consecutive temps
+    ET1, ET2 = (
+            pms_x.tree_swap()
+        )
+```
+In a 2D system, swap the layers in the second component
+```python
+        if ET1 != None:
+            t1 = pms_y.trees[ET1]
+            t2 = pms_y.trees[ET2]
+            BT1, BT2 = t1.BT, t2.BT
+            pms_y.trees[ET1] = t2
+            pms_y.trees[ET2] = t1
+            t1.BT = BT2
+            t2.BT = BT1
+            
+            pms_x.trees[ET1].fy = pms_y.trees[ET1]
+            pms_y.trees[ET1].fy = pms_x.trees[ET1]
+
+            pms_x.trees[ET2].fy = pms_y.trees[ET2]
+            pms_y.trees[ET2].fy = pms_x.trees[ET2]
+            pms_y.t1 = pms_y.trees[pms_y.Ts[0]]
 ```
 
 ## 6. Retrieve Best Model
-
+After sampling, extract the best models:
 ```python
 print('Best model X:', model_x)
 print('Best model Y:', model_y)
