@@ -75,73 +75,67 @@ Utilities for assessing MCMC convergence.
 | Path | Description |
 |------|-------------|
 | `Gelman-Rubin.ipynb` | Computes and visualizes the Gelman–Rubin convergence diagnostic. |
-| `MCMC_sampling.py` | MCMC sampling routines used for convergence analysis. |
+| `MCMC_sampling.py` | MCMC sampling of a dataset. |
 
 ### `I-BMS-1d/`
 Implementation of the Integral Bayesian Machine Scientist for one-dimensional dynamical systems.
 
 | Path | Description |
 |------|-------------|
-| `machinescientist_ode.py` | Main implementation of the 1D I-BMS algorithm. |
-| `mcmc_ode.py` | Parallel-tempering MCMC sampler. |
-| `parallel_ode.py` | Parallel execution utilities. |
+| `machinescientist_ode.py` | Helper functions to use the 1D I-BMS algorithm. |
+| `mcmc_ode.py` | I-BMS model class and MCMC sampler. |
+| `parallel_ode.py` | Parallel execution functions. |
 
 ### `I-BMS-2d/`
 Implementation of I-BMS for coupled two-dimensional systems.
 
 | Path | Description |
 |------|-------------|
-| `machinescientist_ode.py` | Main implementation of the 2D I-BMS algorithm. |
+| `machinescientist_ode.py` | Helper functions to use the 2D I-BMS algorithm. |
 | `mcmc_ode.py` | MCMC sampler for coupled ODE systems. |
-| `parallel_ode.py` | Parallel execution utilities. |
+| `parallel_ode.py` | Parallel execution functions. |
 
 ### `I-BMS-constrained/`
 Constrained version of I-BMS with additional structural restrictions.
 
 | Path | Description |
 |------|-------------|
-| `machinescientist_ode.py` | Main constrained I-BMS implementation. |
-| `mcmc_ode.py` | MCMC sampler for constrained ODE discovery. |
-| `mcmc.py` | Generic constrained MCMC routines. |
-| `parallel_ode.py` | Parallel implementation for ODE inference. |
-| `parallel.py` | General parallel execution utilities. |
+| `machinescientist_ode.py` | Helper functions to use the I-BMS constrained. |
+| `mcmc_ode.py` | MCMC sampler. |
+| `parallel_ode.py` | Parallel execution functions. |
 
 ### `Logistic/`
 Experiments on the one-dimensional logistic growth equation.
 
 | Path | Description |
 |------|-------------|
-| `ms_logistic_v1_fit.py` | Main logistic growth symbolic regression experiments. |
-| `ms_logistic_v1_ode.py` | Logistic ODE implementation. |
-| `learnability.ipynb` | Analysis of equation learnability. |
+| `ms_logistic_v1_fit.py` | Symbolic regression with original BMS. |
+| `ms_logistic_v1_ode.py` | Symbolic regression with the I-BMS. |
+| `learnability.ipynb` | Analysis of learnability. |
 | `learnability.pkl` | Cached learnability results. |
 | `detection_accuracy.ipynb` | Detection accuracy analysis. |
 | `detection_length.pkl` | Cached equation-length experiments. |
 | `detection_sigma.pkl` | Cached noise-level experiments. |
 | `exhaustive_linear_MS.py` | Exhaustive baseline search over linear models. |
 | `noise_data/` | Synthetic noisy datasets. |
-| `sample_noise.py` | Noise generation utilities. |
+| `sample_noise.py` | Noise dataset sampling. |
 
 ### `Lotka-Volterra/`
 Experiments on the Lotka–Volterra predator–prey system.
 
 | Path | Description |
 |------|-------------|
-| `ms_LV_v1_fit.py` | Main symbolic regression experiments. |
-| `ms_LV_v1_ode.py` | Lotka–Volterra simulator. |
-| `learnability.ipynb` | Learnability analysis. |
+| `ms_LV_v1_fit.py` | Symbolic regression with original BMS. |
+| `ms_LV_v1_ode.py` | Symbolic regression with I-BMS. |
 | `learnability.py` | Learnability computations. |
 | `learnability.pkl` | Cached learnability results. |
 | `detection_accuracy.ipynb` | Detection accuracy experiments. |
 | `detection_length.pkl` | Cached equation-length experiments. |
 | `detection_sigma.pkl` | Cached noise-level experiments. |
-| `exhaustive_linear_MS_fit.py` | Exhaustive linear symbolic regression baseline. |
-| `exhaustive_linear_ms.py` | Alternative exhaustive baseline implementation. |
+| `exhaustive_linear_ms.py` | Exhaustive linear symbolic regression baseline. |
 | `noise_data/` | Synthetic noisy datasets. |
-| `sample_noise.py` | Noise generation utilities. |
-| `test_IBMS_2d.ipynb` | Validation notebook for the 2D implementation. |
+| `sample_noise.py` | Sample noise datasets. |
 | `slurm.py` | HPC execution utilities. |
-| `rguimera-machine-scientist/` | Original Bayesian Machine Scientist implementation used as the baseline. |
 
 ### `rguimera-machine-scientist/`
 Original Bayesian Machine Scientist implementation from Guimerà *et al.*, used as the baseline for comparison.
@@ -150,7 +144,7 @@ Original Bayesian Machine Scientist implementation from Guimerà *et al.*, used 
 |------|-------------|
 | `machinescientist.py` | Main Bayesian Machine Scientist implementation. |
 | `mcmc.py` | MCMC sampler. |
-| `parallel.py` | Parallel execution utilities. |
+| `parallel.py` | Parallel execution. |
 
 ### `SINDy_implementation/`
 Reference implementation of Sparse Identification of Nonlinear Dynamics (SINDy).
@@ -172,7 +166,7 @@ Benchmark experiments using dynamical systems from the Strogatz collection.
 | `MCMC_sampling.py` | MCMC experiments. |
 | `ms_LV_v1_fit.py` | Symbolic regression experiments. |
 | `Plot_results.ipynb` | Visualization of benchmark results. |
-| `PYSR_sampling.py` | PySR comparison experiments. |
+| `PYSR_sampling.py` | PySR learning  experiments. |
 | `True_models_I-BMS.ipynb` | Recovery of ground-truth models using I-BMS. |
 | `True_models_PYSR_BMS.ipynb` | Comparison of I-BMS, Bayesian Machine Scientist and PySR. |
 | `slurm.py` | HPC execution utilities. |
