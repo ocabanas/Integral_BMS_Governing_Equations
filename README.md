@@ -27,10 +27,6 @@ This repository includes:
 - Experimental bacterial growth datasets
 - Scripts for training and evaluation
 
-⚠️ **Note:**  
-This branch contains **research code** used for the paper.  
-A **production-ready implementation** will be released in a separate branch.
-
 ---
 
 # 📦 Installation
