@@ -33,24 +33,7 @@ prior = read_prior_par('../I-BMS-2d/Prior/final_prior_param_sq.named_equations.n
 # Read data
 import sys, getopt
 
-def main(argv):
-    inputfile = ''
-    outputfile = ''
-    try:
-        opts, args = getopt.getopt(argv,"h:f:",["file="])
-    except getopt.GetoptError:
-        print('test.py -s <state>')
-        sys.exit(2)
-    print(opts,args)
-    for opt, arg in opts:
-        if opt == '-h':
-            print('test.py -i <state>')
-            sys.exit()
-        elif opt in ("-f", "--file"):
-            file = arg
-    return file
-
-file=main(sys.argv[1:])
+file='../Lotka-Volterra/noise_data/1.0_0.csv'
 
 data=pd.read_csv(file)
 
@@ -223,15 +206,16 @@ def run_instance(_):
         if i%50==0:
             print(f'Sampled model (Step:{i})', pms_x.t1, pms_y.t1,pms_x.t1.E)
             file_name = os.path.basename(file)
-            with open(f'models/checkpoint/{file_name[:-4]}_IBMSv2_mdl_run_{_}.pkl', 'wb') as f:
+            with open(f'{file_name[:-4]}_IBMSv2_mdl_run_{_}_1.pkl', 'wb') as f:
                 # A new file will be created
                 pickle.dump({'x':model_x,'y':model_y}, f)
-            with open(f'models/checkpoint/{file_name[:-4]}_IBMSv2_pt_run_{_}.pkl', 'wb') as f:
+            with open(f'{file_name[:-4]}_IBMSv2_pt_run_{_}_1.pkl', 'wb') as f:
                 # A new file will be created
                 pickle.dump({'x':pms_x,'y':pms_y}, f)
+            pd.Series(dl).to_csv(f"dl_evol_run_{_}.csv", index=False, header=False)
             plt.plot(dl)
             plt.yscale('symlog')
-            plt.savefig(f'models/checkpoint/{file_name[:-4]}_IBMSv2_dl_run_{_}.pdf',format='pdf')
+            plt.savefig(f'{file_name[:-4]}_IBMSv2_dl_run_{_}_1.pdf',format='pdf')
             plt.clf()
         clear_cache()
     return dl,i_mdl,model_x,model_y
@@ -254,13 +238,13 @@ print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 print('END')
 print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 
-with open(f'models/{file_name[:-4]}_IBMSv2.pkl', 'wb') as f:
+with open(f'{file_name[:-4]}_IBMSv2_1.pkl', 'wb') as f:
     # A new file will be created
     pickle.dump({'x':mdl_model_x,'y':mdl_model_y}, f)
 for r in description_lengths:
     plt.plot(r)
 plt.yscale('symlog')
-plt.savefig(f'models/{file_name[:-4]}_IBMSv2.pdf',format='pdf')
+plt.savefig(f'{file_name[:-4]}_IBMSv2_1.pdf',format='pdf')
 plt.clf()
 
 

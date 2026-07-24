@@ -34,21 +34,6 @@ def get_expressions_n(the_vars, n=2):
             npar += 1
         all_exp.append((expres, npar))
     return all_exp
-def get_expressions_no_cte(the_vars, n=2):
-    if n == 0:
-        return [('_a0_', 1)]
-    groups = combinations(the_vars, n)
-    all_exp = []
-    #print(groups)
-    for vs in groups:
-        #print(vs)
-        expres, npar = '(_a0_ * %s)' % vs[0], 1
-        for nv, v in enumerate(vs[1:]):
-            expres = '(%s + (_a%d_ * %s))' % (expres, nv+1, v)
-            npar += 1
-        all_exp.append((expres, npar))
-    #print(all_exp)
-    return all_exp
 
 # ------------------------------------------------------------------------------
 # Get all possible linear expressions
@@ -59,7 +44,6 @@ def get_expressions(the_vars, nmax=None):
         nmax = len(the_vars)
     for n in range(nmax+1):
         all_exp += get_expressions_n(the_vars, n=n)
-        #all_exp += get_expressions_no_cte(the_vars, n=n)
     return all_exp
 
 
@@ -154,7 +138,7 @@ B=deepcopy(data.x.values)
 h=data.t.to_numpy()[1]-data.t.to_numpy()[0]
 x_hat_finite, dxdt_hat_finite = pynumdiff.finite_difference._finite_difference.second_order(B, h)
 fit_x['d0']=pd.Series(dxdt_hat_finite)
-B = data.y.values
+B = deepcopy(data.y.values)
 y_hat_finite, dydt_hat_finite = pynumdiff.finite_difference._finite_difference.second_order(B, h)
 fit_y['d0']=pd.Series(dydt_hat_finite)
 

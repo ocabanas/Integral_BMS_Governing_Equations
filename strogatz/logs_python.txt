@@ -1,3 +1,0 @@
-Matplotlib created a temporary cache directory at /tmp/matplotlib-viw92wqx because the default path (/home/oriolca/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
-slurmstepd-node0: error: *** STEP 30125.0 ON node0 CANCELLED AT 2025-10-15T10:27:35 ***
-slurmstepd-node0: error: *** STEP 30124.0 ON node0 CANCELLED AT 2025-10-17T11:30:03 ***

@@ -5,31 +5,33 @@ import sys
 import numpy as np
 import os
 import glob
+from pathlib import Path
 
 BASE_PATH = '/export/home/shared/Projects/IntegralBMS/Integral_BMS_Governing_Equations/strogatz/'
 NODES_PER_TASK = 1
-PROC_PER_TASK = 1
+PROC_PER_TASK = 5
 USER_MAIL = 'oriol.cabanas@urv.cat'
-JOB_NAME = 'strogatz'
-OUTPUT_PATH = BASE_PATH + 'logs_python.txt'
+JOB_NAME = 'IBMS' # strog
+OUTPUT_PATH = BASE_PATH + 'logs_IBMS_shflow.txt'
 COMMAND_PATH = BASE_PATH + '../venv/bin/python3'
 SCRIPT_PATH = BASE_PATH + 'MCMC_sampling.py'
 
-# Genera una lista de strings que contiene los argumentos para el proceso.
-
 def generate_arguments():
-	args = glob.glob("datasets/*.csv")
-	return args
+    #args = glob.glob("noise_data/*.csv")
+    folder = Path("datasets")
+    files = [f.name for f in folder.iterdir() if f.is_file() and "20_2" in f.name]
+    print(files)
+    files = ['pred_prey_SNR_20_0.csv']
+    return files
 
-# Construye el srun.
 def build_command(arg):
-	base_command = (
-	f'srun --oversubscribe --cpus-per-task=1 --mem=2G '
-	f'--mail-user {USER_MAIL} -J {JOB_NAME} '
-	f'--mail-type=ALL --error={OUTPUT_PATH} --output={OUTPUT_PATH} '
-	)
-	script_command = f'{COMMAND_PATH} {SCRIPT_PATH} -f {arg}'
-	return base_command + script_command
+    base_command = (
+            f'srun --ntasks=1 --cpus-per-task={PROC_PER_TASK} --mem=10G --time=60-00:00:00 '
+    f'--mail-user {USER_MAIL} -J {JOB_NAME} '
+    f'--mail-type=ALL --error={OUTPUT_PATH} --output={OUTPUT_PATH} '
+    )
+    script_command = f'{COMMAND_PATH} {SCRIPT_PATH} -f datasets/{arg}'
+    return base_command + script_command
 
 def main():
 	args = generate_arguments()
@@ -42,12 +44,9 @@ def main():
 	else:
 		for arg in args:
 			chunk,file=os.path.split(arg)
-			if not os.path.isfile(f'models/{file[:-4]}_IBMS.pkl'):
-				print(arg,file[:-4])
-				command = build_command(arg)
-				print(command)
-				process = subprocess.Popen(command, shell=True)
-				process.wait()  # wait for this job to finish before next
-
+			print(arg,file[:-4])
+			command = build_command(arg)
+			print(command)
+			proceses = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
 if __name__ == "__main__":
 	main()
