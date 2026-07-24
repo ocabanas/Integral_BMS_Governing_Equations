@@ -52,36 +52,134 @@ Main dependencies:
 
 ---
 
-# 📁 Repository Structure
+## 📂 Directory and File Description
 
-## Datasets
+### `Bacteria/`
+Contains the bacterial growth datasets and experiments used to evaluate the physics-informed version of I-BMS.
 
-```
-Logistic/noise_data/
-Lotka_Volterra/noise_data/
-Bacteria/Train_test_data_*/
-```
+| Path | Description |
+|------|-------------|
+| `Full_data_lin_term_prod_2025_03_27-06_00_44/` | Full processed bacterial growth dataset used in the experiments. |
+| `microbial_growth_full*.csv` | Experimental microbial growth measurements. |
+| `Train_test_data_lin_term_com2025_03_11-11_21_44/` | Preprocessed train/test splits used for benchmarking. |
+| `ms_bacteris_v2_extended_datasets.py` | Main script for symbolic regression on the complete bacterial datasets. |
 
-## Source Code
+### `BIC_validation/`
+Notebooks used to evaluate the Bayesian Information Criterion (BIC) employed for model selection.
 
-```
-Logistic/rguimera-machinescientist/         # 1D Integral BMS
-Lotka-Volterra/rguimera-machinescientist/   # 2D Integral BMS
-Bacteria/rguimera-machinescientist/         # Physics-informed I-BMS
-```
+| Path | Description |
+|------|-------------|
+| `Benchmark.ipynb` | Benchmark comparison of candidate symbolic models. |
+| `BIC_model_comp.ipynb` | Comparison of models using the BIC score. |
+| `GenerateModels.ipynb` | Generation of candidate symbolic equations for BIC evaluation. |
 
-## Results
+### `Gelman-Rubin/`
+Utilities for assessing MCMC convergence.
 
-```
-Logistic/noise_data_ode/
-Logistic/noise_data_fit/
-Logistic/noise_data_smooth/
+| Path | Description |
+|------|-------------|
+| `Gelman-Rubin.ipynb` | Computes and visualizes the Gelman–Rubin convergence diagnostic. |
+| `MCMC_sampling.py` | MCMC sampling routines used for convergence analysis. |
 
-Lotka_Volterra/noise_data_ode/      (available on demand)
-Lotka_Volterra/noise_data_fit/
-Lotka_Volterra/noise_data_smooth/
-Lotka_Volterra/results/             (available on demand)
-```
+### `I-BMS-1d/`
+Implementation of the Integral Bayesian Machine Scientist for one-dimensional dynamical systems.
+
+| Path | Description |
+|------|-------------|
+| `machinescientist_ode.py` | Main implementation of the 1D I-BMS algorithm. |
+| `mcmc_ode.py` | Parallel-tempering MCMC sampler. |
+| `parallel_ode.py` | Parallel execution utilities. |
+
+### `I-BMS-2d/`
+Implementation of I-BMS for coupled two-dimensional systems.
+
+| Path | Description |
+|------|-------------|
+| `machinescientist_ode.py` | Main implementation of the 2D I-BMS algorithm. |
+| `mcmc_ode.py` | MCMC sampler for coupled ODE systems. |
+| `parallel_ode.py` | Parallel execution utilities. |
+
+### `I-BMS-constrained/`
+Constrained version of I-BMS with additional structural restrictions.
+
+| Path | Description |
+|------|-------------|
+| `machinescientist_ode.py` | Main constrained I-BMS implementation. |
+| `mcmc_ode.py` | MCMC sampler for constrained ODE discovery. |
+| `mcmc.py` | Generic constrained MCMC routines. |
+| `parallel_ode.py` | Parallel implementation for ODE inference. |
+| `parallel.py` | General parallel execution utilities. |
+
+### `Logistic/`
+Experiments on the one-dimensional logistic growth equation.
+
+| Path | Description |
+|------|-------------|
+| `ms_logistic_v1_fit.py` | Main logistic growth symbolic regression experiments. |
+| `ms_logistic_v1_ode.py` | Logistic ODE implementation. |
+| `learnability.ipynb` | Analysis of equation learnability. |
+| `learnability.pkl` | Cached learnability results. |
+| `detection_accuracy.ipynb` | Detection accuracy analysis. |
+| `detection_length.pkl` | Cached equation-length experiments. |
+| `detection_sigma.pkl` | Cached noise-level experiments. |
+| `exhaustive_linear_MS.py` | Exhaustive baseline search over linear models. |
+| `noise_data/` | Synthetic noisy datasets. |
+| `sample_noise.py` | Noise generation utilities. |
+
+### `Lotka-Volterra/`
+Experiments on the Lotka–Volterra predator–prey system.
+
+| Path | Description |
+|------|-------------|
+| `ms_LV_v1_fit.py` | Main symbolic regression experiments. |
+| `ms_LV_v1_ode.py` | Lotka–Volterra simulator. |
+| `learnability.ipynb` | Learnability analysis. |
+| `learnability.py` | Learnability computations. |
+| `learnability.pkl` | Cached learnability results. |
+| `detection_accuracy.ipynb` | Detection accuracy experiments. |
+| `detection_length.pkl` | Cached equation-length experiments. |
+| `detection_sigma.pkl` | Cached noise-level experiments. |
+| `exhaustive_linear_MS_fit.py` | Exhaustive linear symbolic regression baseline. |
+| `exhaustive_linear_ms.py` | Alternative exhaustive baseline implementation. |
+| `noise_data/` | Synthetic noisy datasets. |
+| `sample_noise.py` | Noise generation utilities. |
+| `test_IBMS_2d.ipynb` | Validation notebook for the 2D implementation. |
+| `slurm.py` | HPC execution utilities. |
+| `rguimera-machine-scientist/` | Original Bayesian Machine Scientist implementation used as the baseline. |
+
+### `rguimera-machine-scientist/`
+Original Bayesian Machine Scientist implementation from Guimerà *et al.*, used as the baseline for comparison.
+
+| Path | Description |
+|------|-------------|
+| `machinescientist.py` | Main Bayesian Machine Scientist implementation. |
+| `mcmc.py` | MCMC sampler. |
+| `parallel.py` | Parallel execution utilities. |
+
+### `SINDy_implementation/`
+Reference implementation of Sparse Identification of Nonlinear Dynamics (SINDy).
+
+| Path | Description |
+|------|-------------|
+| `EnsembleWeakSINDy.ipynb` | Ensemble Weak-SINDy experiments. |
+| `Z-SINDy-strogatz.ipynb` | SINDy benchmark on Strogatz systems. |
+| `requirements.txt` | Python dependencies. |
+| `requirements_pysindy.txt` | Dependencies for the PySINDy implementation. |
+
+### `strogatz/`
+Benchmark experiments using dynamical systems from the Strogatz collection.
+
+| Path | Description |
+|------|-------------|
+| `datasets/` | Benchmark datasets. |
+| `datasets.ipynb` | Dataset generation notebook. |
+| `MCMC_sampling.py` | MCMC experiments. |
+| `ms_LV_v1_fit.py` | Symbolic regression experiments. |
+| `Plot_results.ipynb` | Visualization of benchmark results. |
+| `PYSR_sampling.py` | PySR comparison experiments. |
+| `True_models_I-BMS.ipynb` | Recovery of ground-truth models using I-BMS. |
+| `True_models_PYSR_BMS.ipynb` | Comparison of I-BMS, Bayesian Machine Scientist and PySR. |
+| `slurm.py` | HPC execution utilities. |
 
 ---
 
@@ -255,16 +353,3 @@ The algorithm returns:
 | Lotka-Volterra (2) | 2D | Synthetic | ✔ |
 | Predator-Prey | 2D | Synthetic | ✔ |
 | Van der Pol Osc. | 2D | Synthetic | ✔ |
-
----
-
-# 📄 Citation
-
-```bibtex
-@article{integral_bms_2025,
-  title={Integral Bayesian symbolic regression for optimal discovery
-         of governing equations from scarce and noisy data},
-  author={...},
-  year={2025}
-}
-```
